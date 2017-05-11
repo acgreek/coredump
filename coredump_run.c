@@ -11,5 +11,6 @@ int main(int argc,char * argv[]) {
 	while (1) {
 		sleep(3);
 	}
+	fini_core_dump_handler();
 	return 0;
 }
