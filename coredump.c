@@ -67,7 +67,8 @@ void setup_core_dump_handler(const char *path) {
 }
 
 void fini_core_dump_handler(void){
-	write(pipe_fd[1], "exit",5);
+	if (5 != write(pipe_fd[1], "exit",5)) {
+	}
 	int status;
 	waitpid(childpid, &status, 0);
 
