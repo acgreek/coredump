@@ -29,3 +29,16 @@ int main(int argc, char * argv[]) {
   return 0;
 }
 ```
+
+or with c++, you can use this conviencent wrapper and not worry about the clean up
+
+```c++
+#include "coredump.h"
+
+int main(int argc, char * argv[]) {
+  CoreDumpHandler core_dump_handler("/tmp/example_core");
+  .... program body here ....
+  
+  return 0;
+}
+```
