@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-void setup_core_dump_handler(const char * path);
-void fini_core_dump_handler(void);
+int setup_core_dump_handler(const char * path);
+int fini_core_dump_handler(void);
 
 #ifdef __cplusplus
 }
